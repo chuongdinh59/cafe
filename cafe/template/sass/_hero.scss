@@ -1,0 +1,54 @@
+.hero{
+    margin-top: 20px;
+    min-height: 700px;
+    &-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+   &-img{
+        position: absolute;
+        top: 0;
+        width: 84%;
+        right: 0;
+        transform: translateX(11%);
+   }
+   &-content{
+        z-index: 1;
+        max-width: 700px;
+        transform: translateY(50%);
+   }
+   &-caption{
+        z-index: 1;
+        color: $primary;
+        font-family: "ark", Sans-serif;
+        font-size: 60px;
+        letter-spacing: 2px;
+        font-weight: 500;
+   }
+}
+@media screen and (max-width: 735px){
+     .hero{
+          &-container{
+               flex-direction: column;
+          }
+          &-img{
+               z-index: -1;
+               width: 100%;
+               
+          }
+          &-content{
+               margin-top: 50%;
+          }
+
+          h2{
+               font-size: 50px;
+          }
+     }
+}
+@media screen and (max-width: 1023px){
+     .hero{
+          min-height: 500px;
+     }
+}

@@ -1,0 +1,128 @@
+.header{
+    &.active{
+        background-color: #FFFBF2;
+    }
+    &-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }   
+    &-nav{
+        display: flex;
+        align-items: center;
+        gap: 0 40px;
+        a{
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+    }
+    &-main{
+        display: flex;
+        align-items: center;
+        gap: 0 100px;
+    }
+
+    &-social{
+        display: flex;
+        align-items: center;
+        gap: 0 20px;
+        a{
+            font-size: 20px;
+            font-weight: 500;
+            color: #fff;
+        }
+        & .logo-social:nth-child(4){
+            margin: 0 20px;
+        }
+    }
+    
+    &-phone{
+        padding:  28px 55px;
+        background-color: $primary;
+        font-size: 25px;
+        letter-spacing: 3px;
+        font-family: "bebas";
+
+        display: flex;
+        align-items: center;
+        gap: 0 20px;
+
+        .bar-icon{
+            display: none;
+        }
+    }
+   
+    &-logo{
+        width: 110px;
+        height: auto;
+        position: relative;
+    }
+    img{
+       position: absolute;
+       top: -20px;
+       left: 0;
+    }
+    
+    
+}
+.nav{
+    width: 100%;
+    max-width: 40%;
+    height: 100vh;
+    background-color: #FFFBF2;
+    position: fixed;
+    top:0;
+    transform: translateX(-100%);
+}
+@media screen and (max-width: 1023px){
+    .header{
+        &-nav{
+            display:  none;
+        }
+        &-phone{
+            padding: 20px 30px;
+            p{
+                display: none;
+            }
+            .bar-icon{
+                display: block;
+            }
+        }
+    }
+}
+@media screen and (max-width: 735px){
+    .header{
+        &-main{
+            width: 100%;
+        }
+        &-social{
+            justify-content: space-between;
+            width: 100%;
+            gap: 0 30px;
+            i{
+                font-size: 24px;
+            }
+            .logo-social:nth-child(4){
+                margin: 0;
+            }
+        }
+        &-phone{
+            padding: 20px 0;
+            background-color: transparent;
+            p{
+                font-size: 20px;
+            }
+        }
+        &-logo{
+            position: unset;
+            width: 0;
+        }
+        img{
+            position: absolute;
+            top: 60px;
+            max-width: 38%;
+            left: 5%;
+        }
+    }
+}
