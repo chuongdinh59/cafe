@@ -1,0 +1,83 @@
+.banner{
+    margin-top: 250px;
+    min-height: 650px;
+    background-image: url(../../img/ingredients-for-making-coffee-flat-lay-ASPVLKY.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    &.active{
+        .banner-caption{
+            transform: translateZ(0px);
+            opacity: 1;
+        }
+        .banner-heading{
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+    &-overplay{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.3);
+    }
+    &-top{
+       position: absolute;
+       top: 0;
+       left: 0;
+       right: 0;
+    }
+    &-bottom{
+       position: absolute;
+       bottom: 0;
+       left: 0;
+       right: 0;
+    }
+    img{
+        width: 100%;
+    }
+    &-content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        width: 100%;
+    }
+    &-heading{
+        font-family: "ark";
+        color: $primary;
+        font-size: 60px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        transition: .8s ;
+        opacity: 0;
+        transition-delay: .5s;
+        transform: translateY(100px);
+    }
+    &-caption{
+        font-size: 110px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        transition: .8s ease-in-out;
+        // transition-delay: .5s;
+        opacity: 0;
+        transform: perspective(1000px) translateZ(500px);
+    }
+}
+@media screen and (max-width: 1023px){
+    .banner{
+        margin-top: 40px;
+        min-height: 350px;
+        &-caption{
+            font-size: 50px;
+        }
+        &-heading{
+            font-size: 50px;
+        }
+    }
+}
